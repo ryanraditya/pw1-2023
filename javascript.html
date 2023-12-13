@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=i, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="border-radius: 0.5rem; color: blue; background-color: khaki;">
+        <h1>Kalkulator luas dan keliling lingkaran</h1>
+    <input type="number" placeholder="masukan jari jari" id="phi"  >
+    <button onclick="lingkaran()">kirim</button>
+    Hasil keliling : <span id="keliling">keliling lingkaran</span>
+    <br>
+    <br>
+    <input type="number" placeholder="masukan jari jari" id="r"  >
+    <button onclick="luas()">kirim</button>
+    Hasil luas: <span id="luas">luas lingkaran</span>
+    </fieldset>
+    <br>
+    
+    <script>
+        function lingkaran(){
+            document.getElementById(`keliling`).innerHTML=3.14*2*parseFloat(phi.value);
+        }
+        function luas(){
+            document.getElementById(`luas`).innerHTML=3.14*parseFloat(Math.pow(r.value,2));
+        }
+       
+    </script>
+</body>
+</html>
