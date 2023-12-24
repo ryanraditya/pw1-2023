@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+</head>
+<body>
+<fieldset style="background-color: bisque;">
+    <legend>
+        <h1>Validasi Tiket Bioskop Mini</h1>
+    </legend>
+<form action="">
+    <label for="">Nama</label>
+    <input type="text" name="" id="nama" required>
+    <br>
+    <label for="">Email</label>
+    <input type="email" name="" id="email"required>
+    <br>
+    <label for="">Waktu</label>
+    <input type="time" name="" id="waktu" >
+    <br>
+    <label for="">jumlahTiket</label>
+    <input type="number" name="" id="ticket" >
+    <br>
+    <button type="button" onclick="cek()" >Kirim</button>
+</form>
+</fieldset>
+    <script>
+        function cek(){
+            var Nama=document.getElementById("nama").value;
+            var Email=document.getElementById("email").value;
+            var Waktu=document.getElementById("waktu").value;
+            var Tiket=document.getElementById("ticket").value;
+            Tiket.innerHTML=parseInt(Tiket);
+
+            if (Nama=="ryanraditya"&Email=="ryan@gmail.com" & Tiket >=1 ){
+                document.write(`<p>Nama:${Nama}
+                                <p>Email:${Email}
+                                <p>Tiket:${Tiket}
+                                <p>Waktu:${Waktu}
+                            `)
+            }
+            else{
+                alert("Anda belum memiliki tiket")
+            }
+        }  
+    </script>
+</body>
+</html>
